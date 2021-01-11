@@ -55,19 +55,4 @@ export default {
   font-size: 1.8rem;
   padding: 20px 0;
 }
-
-/* コンポーネント */
-
-.input-area {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.form-area {
-  width: 70%;
-  height: 30px;
-  margin: 2% 0 2%;
-  border: 1px solid rgb(195, 195, 195);
-  border-radius: 5px;
-}
 </style>
