@@ -39,7 +39,7 @@ export default {
   methods: {
     async getLists() {
       let todoLists;
-      await axios.get('https://warm-sea-73575.herokuapp.com/api/todos/')
+      await axios.get('https://warm-sea-73575.herokuapp.com/api/todos')
       .then((response) => {
         todoLists = response.data.data;
         console.log(response);
@@ -50,7 +50,7 @@ export default {
       this.lists = todoLists;
     },
     addList() {
-      axios.post('https://warm-sea-73575.herokuapp.com/api/todos/', {
+      axios.post('https://warm-sea-73575.herokuapp.com/api/todos', {
         list: this.message
       })
       .then((response) => {
