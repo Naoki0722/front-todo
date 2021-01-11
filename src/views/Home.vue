@@ -39,7 +39,7 @@ export default {
   methods: {
     async getLists() {
       let todoLists;
-      await axios.get('http://localhost:8000/api/todos/')
+      await axios.get('https://warm-sea-73575.herokuapp.com/api/todos/')
       .then((response) => {
         todoLists = response.data.data;
         console.log(response);
@@ -50,7 +50,7 @@ export default {
       this.lists = todoLists;
     },
     addList() {
-      axios.post('http://localhost:8000/api/todos/', {
+      axios.post('https://warm-sea-73575.herokuapp.com/api/todos/', {
         list: this.message
       })
       .then((response) => {
@@ -63,7 +63,7 @@ export default {
       });
     },
     updateList(id,todo) {
-      axios.put(`http://localhost:8000/api/todos/${id}`, {
+      axios.put(`https://warm-sea-73575.herokuapp.com/api/todos/${id}`, {
         list: todo
       })
       .then((response) => {
@@ -75,7 +75,7 @@ export default {
       });
     },
     deleteList(id) {
-      axios.delete(`http://localhost:8000/api/todos/${id}`, {
+      axios.delete(`https://warm-sea-73575.herokuapp.com/api/todos/${id}`, {
         data: {
           id: id
         }
